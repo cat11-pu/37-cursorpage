@@ -22,10 +22,10 @@ while (guard < 100) {
 }
 const out = render(spec);
 
-emit("每页内容 =", JSON.stringify(pages));
+emit("每页内容 =", pages);
 emit("翻页是否恰好覆盖每个元素一次 =", out.covered);
-emit("重复出现的元素 =", JSON.stringify(out.duplicated));
-emit("漏掉的元素 =", JSON.stringify(out.missed));
+emit("重复出现的元素 =", out.duplicated);
+emit("漏掉的元素 =", out.missed);
 emit("旧游标在插入后是否仍有效 =", out.stable);
 emit("游标损坏的错误码 =", spec.bad_cursor_code);
 
